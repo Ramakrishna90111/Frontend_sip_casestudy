@@ -3,16 +3,16 @@ import SideBar from "./sideBar";
 
 export default function DashboardShell({ children, title, subtitle }) {
     return (
-        <main className="min-h-screen bg-[#d7d7df] p-6">
-            <div className="mx-auto flex min-h-[calc(100vh-48px)] max-w-7xl overflow-hidden rounded-[28px] bg-[#f7f7fa] shadow-2xl">
+        <main className="min-h-screen theme-bg-page bg-grid">
+            <div className="mx-auto flex min-h-screen max-w-[1440px]">
                 <SideBar />
-                <section className="flex-1 overflow-auto px-10 py-9">
+                <section className="flex-1 overflow-auto p-6 lg:p-8 xl:p-10 animate-fade-in">
                     <div className="mb-8 flex items-center justify-between gap-4">
-                        <div>
-                            <h1 className="text-3xl font-bold text-black">{title}</h1>
-                            {subtitle ? <p className="mt-2 text-sm text-gray-500">{subtitle}</p> : null}
+                        <div className="animate-slide-up">
+                            <h1 className="text-2xl lg:text-3xl font-bold theme-text-primary tracking-tight">{title}</h1>
+                            {subtitle ? <p className="mt-2 text-sm theme-text-muted max-w-2xl">{subtitle}</p> : null}
                         </div>
-                        <div className="h-11 w-11 rounded-full bg-teal-500 text-white flex items-center justify-center font-bold">
+                        <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-indigo-500/25 shrink-0">
                             A
                         </div>
                     </div>
